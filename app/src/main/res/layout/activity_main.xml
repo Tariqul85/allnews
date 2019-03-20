@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="isLoading"
+            type="boolean" />
+
+        <variable
+            name="handler"
+            type="com.csbl.android.news.ui.MainActivity.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange2"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:title="Bangla All Newspaper"
+            app:titleTextColor="@android:color/black">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp">
+
+                <ImageButton
+                    android:id="@+id/prothom_alo"
+                    android:onClick="@{() -> handler.onClicked(@string/url_prathom_alo)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/prothomalo"
+                    app:layout_constraintEnd_toStartOf="@+id/ittafak"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/ittafak"
+                    android:onClick="@{() -> handler.onClicked(@string/url_ittefaq)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ittafak"
+                    app:layout_constraintStart_toEndOf="@id/prothom_alo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/bangla"
+                    android:onClick="@{() -> handler.onClicked(@string/url_bangla)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bangla"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/prothom_alo"
+                    app:layout_constraintEnd_toStartOf="@+id/somokal" />
+
+
+                <ImageButton
+                    android:id="@+id/somokal"
+                    android:onClick="@{() -> handler.onClicked(@string/url_samakal)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/somokal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/bangla"
+                    app:layout_constraintTop_toBottomOf="@+id/ittafak" />
+
+
+                <ImageButton
+                    android:id="@+id/amadershomoy"
+                    android:onClick="@{() -> handler.onClicked(@string/url_amadershomoy)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/amadershomoy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/noyadigonto"
+                    app:layout_constraintTop_toBottomOf="@+id/bangla" />
+
+
+                <ImageButton
+                    android:id="@+id/noyadigonto"
+                    android:onClick="@{() -> handler.onClicked(@string/url_nayadiganta)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/noyadigonto"
+                    app:layout_constraintStart_toEndOf="@id/amadershomoy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/somokal" />
+
+
+                <ImageButton
+                    android:id="@+id/kalerkontho"
+                    android:onClick="@{() -> handler.onClicked(@string/url_kalerkantho)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/kalerkontho"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/jaijaidin"
+                    app:layout_constraintTop_toBottomOf="@id/amadershomoy" />
+
+
+                <ImageButton
+                    android:id="@+id/jaijaidin"
+                    android:onClick="@{() -> handler.onClicked(@string/url_jaijaidin)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jaijaidin"
+                    app:layout_constraintStart_toEndOf="@+id/kalerkontho"
+                    app:layout_constraintTop_toBottomOf="@+id/noyadigonto"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/bangladeshprotidin"
+                    android:onClick="@{() -> handler.onClicked(@string/url_pratidin)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bangladeshprrotidin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/inkilab"
+                    app:layout_constraintTop_toBottomOf="@+id/kalerkontho" />
+
+
+                <ImageButton
+                    android:id="@+id/inkilab"
+                    android:onClick="@{() -> handler.onClicked(@string/url_inqilab)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/inkilab"
+                    app:layout_constraintStart_toEndOf="@id/bangladeshprotidin"
+                    app:layout_constraintTop_toBottomOf="@+id/jaijaidin"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/manobjomin"
+                    android:onClick="@{() -> handler.onClicked(@string/url_mzamin)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/manobjomin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bangladeshprotidin"
+                    app:layout_constraintEnd_toStartOf="@+id/songram" />
+
+
+                <ImageButton
+                    android:id="@+id/songram"
+                    android:onClick="@{() -> handler.onClicked(@string/url_sangram)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/songram"
+                    app:layout_constraintStart_toEndOf="@id/manobjomin"
+                    app:layout_constraintTop_toBottomOf="@id/inkilab"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/vurerkagos"
+                    android:onClick="@{() -> handler.onClicked(@string/url_bhorerkagoj)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vurerkagos"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/manobjomin"
+                    app:layout_constraintEnd_toStartOf="@+id/jonokhontho" />
+
+
+                <ImageButton
+                    android:id="@+id/jonokhontho"
+                    android:onClick="@{() -> handler.onClicked(@string/url_janakantha)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jonokhontho"
+                    app:layout_constraintStart_toEndOf="@id/vurerkagos"
+                    app:layout_constraintTop_toBottomOf="@id/songram"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/jugantor"
+                    android:onClick="@{() -> handler.onClicked(@string/url_jugantor)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jugantor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vurerkagos"
+                    app:layout_constraintEnd_toStartOf="@+id/jonokhontho" />
+
+
+                <ImageButton
+                    android:id="@+id/sangbad"
+                    android:onClick="@{() -> handler.onClicked(@string/url_sangbad)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sangbad"
+                    app:layout_constraintStart_toEndOf="@id/jugantor"
+                    app:layout_constraintTop_toBottomOf="@id/jonokhontho"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/bangladeshjarnal"
+                    android:onClick="@{() -> handler.onClicked(@string/url_journal)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bangladeshjarnal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/jugantor"
+                    app:layout_constraintEnd_toStartOf="@+id/gonokhontho" />
+
+
+                <ImageButton
+                    android:id="@+id/gonokhontho"
+                    android:onClick="@{() -> handler.onClicked(@string/url_gonokantho)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gonokhontho"
+                    app:layout_constraintStart_toEndOf="@id/bangladeshjarnal"
+                    app:layout_constraintTop_toBottomOf="@id/sangbad"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/bornikbarta"
+                    android:onClick="@{() -> handler.onClicked(@string/url_bonikbarta)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bornikbarta"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bangladeshjarnal"
+                    app:layout_constraintEnd_toStartOf="@+id/amaderarthoniti" />
+
+
+                <ImageButton
+                    android:id="@+id/amaderarthoniti"
+                    android:onClick="@{() -> handler.onClicked(@string/url_amaderorthoneeti)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/amaderarthoniti"
+                    app:layout_constraintStart_toEndOf="@id/bornikbarta"
+                    app:layout_constraintTop_toBottomOf="@id/gonokhontho"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/vorerdhak"
+                    android:onClick="@{() -> handler.onClicked(@string/url_bhorer_dak)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vorerdhak"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bornikbarta"
+                    app:layout_constraintEnd_toStartOf="@+id/dinkal" />
+
+
+                <ImageButton
+                    android:id="@+id/dinkal"
+                    android:onClick="@{() -> handler.onClicked(@string/url_dailydinkal)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dinkal"
+                    app:layout_constraintStart_toEndOf="@id/vorerdhak"
+                    app:layout_constraintTop_toBottomOf="@id/amaderarthoniti"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/manobkhontho"
+                    android:onClick="@{() -> handler.onClicked(@string/url_manobkantha)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/manobkhontho"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vorerdhak"
+                    app:layout_constraintEnd_toStartOf="@+id/alokitobangladesh" />
+
+
+                <ImageButton
+                    android:id="@+id/alokitobangladesh"
+                    android:onClick="@{() -> handler.onClicked(@string/url_alokitobangladesh)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/alokitobangladesh"
+                    app:layout_constraintStart_toEndOf="@id/manobkhontho"
+                    app:layout_constraintTop_toBottomOf="@id/dinkal"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/bdnews24"
+                    android:onClick="@{() -> handler.onClicked(@string/url_bdnews24)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bdnews24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/manobkhontho"
+                    app:layout_constraintEnd_toStartOf="@+id/banglanews" />
+
+
+                <ImageButton
+                    android:id="@+id/banglanews"
+                    android:onClick="@{() -> handler.onClicked(@string/url_banglanews24)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/banglanews"
+                    app:layout_constraintStart_toEndOf="@id/bdnews24"
+                    app:layout_constraintTop_toBottomOf="@id/alokitobangladesh"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/live24"
+                    android:onClick="@{() -> handler.onClicked(@string/url_24livenewspaper)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/live24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bdnews24"
+                    app:layout_constraintEnd_toStartOf="@+id/banglatibiun" />
+
+
+                <ImageButton
+                    android:id="@+id/banglatibiun"
+                    android:onClick="@{() -> handler.onClicked(@string/url_banglatribune)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/banglatibiun"
+                    app:layout_constraintStart_toEndOf="@id/live24"
+                    app:layout_constraintTop_toBottomOf="@id/banglanews"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/jagonews"
+                    android:onClick="@{() -> handler.onClicked(@string/url_jagonews)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/jagonews"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/live24"
+                    app:layout_constraintEnd_toStartOf="@+id/amadershomoy.com" />
+
+
+                <ImageButton
+                    android:id="@+id/amadershomoy.com"
+                    android:onClick="@{() -> handler.onClicked(@string/url_amadershomoy_com)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/amadershomoycom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/jagonews"
+                    app:layout_constraintTop_toBottomOf="@id/banglatibiun" />
+
+
+                <ImageButton
+                    android:id="@+id/bbcbangla"
+                    android:onClick="@{() -> handler.onClicked(@string/url_bbc_bangla)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bbcbangla"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/jagonews"
+                    app:layout_constraintEnd_toStartOf="@+id/dmpnews" />
+
+
+                <ImageButton
+                    android:id="@+id/dmpnews"
+                    android:onClick="@{() -> handler.onClicked(@string/url_dmpnews)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dmpnews"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/bbcbangla"
+                    app:layout_constraintTop_toBottomOf="@id/amadershomoy.com" />
+
+
+                <ImageButton
+                    android:id="@+id/rising"
+                    android:onClick="@{() -> handler.onClicked(@string/url_risingbd)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/risingbd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bbcbangla"
+                    app:layout_constraintEnd_toStartOf="@+id/ntv" />
+
+
+                <ImageButton
+                    android:id="@+id/ntv"
+                    android:onClick="@{() -> handler.onClicked(@string/url_ntvbd)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ntb"
+                    app:layout_constraintStart_toEndOf="@id/rising"
+                    app:layout_constraintTop_toBottomOf="@id/dmpnews"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/poriborton"
+                    android:onClick="@{() -> handler.onClicked(@string/url_poriborton)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/poriborton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rising"
+                    app:layout_constraintEnd_toStartOf="@+id/protidin" />
+
+
+                <ImageButton
+                    android:id="@+id/protidin"
+                    android:onClick="@{() -> handler.onClicked(@string/url_amaderprotidin)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/protidin"
+                    app:layout_constraintStart_toEndOf="@id/poriborton"
+                    app:layout_constraintTop_toBottomOf="@id/ntv"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/dhakaprotidin"
+                    android:onClick="@{() -> handler.onClicked(@string/url_dhakaprotidin)}"
+                    android:layout_width="157dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/dhakaprotidin"
+                    app:layout_constraintEnd_toStartOf="@+id/amarsangbad"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/poriborton" />
+
+
+                <ImageButton
+                    android:id="@+id/amarsangbad"
+                    android:onClick="@{() -> handler.onClicked(@string/url_amar_sangbad)}"
+                    android:layout_width="157dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/amarsangbad"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/dhakaprotidin"
+                    app:layout_constraintTop_toBottomOf="@id/protidin" />
+
+
+                <ImageButton
+                    android:id="@+id/channeli"
+                    android:onClick="@{() -> handler.onClicked(@string/url_channelionline)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/channeli"
+                    app:layout_constraintEnd_toStartOf="@+id/somoy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dhakaprotidin" />
+
+
+                <ImageButton
+                    android:id="@+id/somoy"
+                    android:onClick="@{() -> handler.onClicked(@string/url_somoynews)}"
+                    android:layout_width="157dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/somoy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/channeli"
+                    app:layout_constraintTop_toBottomOf="@id/amarsangbad" />
+
+
+                <ImageButton
+                    android:id="@+id/independent"
+                    android:onClick="@{() -> handler.onClicked(@string/url_independent)}"
+                    android:layout_width="157dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/independent"
+                    app:layout_constraintEnd_toStartOf="@+id/ekushe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/channeli" />
+
+
+                <ImageButton
+                    android:id="@+id/ekushe"
+                    android:onClick="@{() -> handler.onClicked(@string/url_ekushey)}"
+                    android:layout_width="157dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ekushe"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/independent"
+                    app:layout_constraintTop_toBottomOf="@id/somoy" />
+
+
+                <ImageButton
+                    android:id="@+id/rtvnews"
+                    android:onClick="@{() -> handler.onClicked(@string/url_rtvonline)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/rtv"
+                    app:layout_constraintEnd_toStartOf="@+id/banglaexpres"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/independent" />
+
+
+                <ImageButton
+                    android:id="@+id/banglaexpres"
+                    android:onClick="@{() -> handler.onClicked(@string/url_banglaexpress)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/banglaexpres"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/rtvnews"
+                    app:layout_constraintTop_toBottomOf="@id/ekushe" />
+
+
+                <ImageButton
+                    android:id="@+id/channel24"
+                    android:onClick="@{() -> handler.onClicked(@string/url_channel24)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/channel24"
+                    app:layout_constraintEnd_toStartOf="@+id/banglaexpres"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rtvnews" />
+
+
+                <ImageButton
+                    android:id="@+id/ictnews"
+                    android:onClick="@{() -> handler.onClicked(@string/url_ictnews)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ictnews"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/channel24"
+                    app:layout_constraintTop_toBottomOf="@id/banglaexpres" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

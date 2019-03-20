@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">BD News</string>
+    <string name="title_activity_jugantor">Jugantor</string>
+
+
+    <string name="url_prathom_alo">https://www.prothomalo.com/</string>
+    <string name="url_ittefaq">http://www.ittefaq.com.bd/</string>
+    <string name="url_bangla">https://www.bn.bangla.report/</string>
+    <string name="url_samakal">https://samakal.com/</string>
+    <string name="url_amadershomoy">http://dainikamadershomoy.com/</string>
+    <string name="url_nayadiganta">http://www.dailynayadiganta.com/</string>
+    <string name="url_kalerkantho">http://www.kalerkantho.com/index.php</string>
+    <string name="url_jaijaidin">http://www.jaijaidinbd.com/</string>
+    <string name="url_pratidin">http://www.bd-pratidin.com/</string>
+    <string name="url_inqilab">https://www.dailyinqilab.com/</string>
+    <string name="url_mzamin">http://www.mzamin.com/</string>
+    <string name="url_sangram">http://www.dailysangram.com/</string>
+    <string name="url_bhorerkagoj">https://www.bhorerkagoj.com/</string>
+    <string name="url_janakantha">http://www.dailyjanakantha.com/</string>
+    <string name="url_jugantor">https://www.jugantor.com/</string>
+    <string name="url_sangbad">http://thesangbad.net/</string>
+    <string name="url_journal">https://www.bd-journal.com/</string>
+    <string name="url_gonokantho">http://www.gonokantho.com/en/</string>
+    <string name="url_bonikbarta">http://bonikbarta.net/bangla/</string>
+    <string name="url_amaderorthoneeti">https://amaderorthoneeti.com/new/</string>
+    <string name="url_bhorer_dak">http://bhorer-dak.com/</string>
+    <string name="url_dailydinkal">http://www.dailydinkal.net/2019/03/18/index.php</string>
+    <string name="url_manobkantha">http://www.manobkantha.com/</string>
+    <string name="url_alokitobangladesh">http://www.alokitobangladesh.com/</string>
+    <string name="url_bdnews24">https://bangla.bdnews24.com/</string>
+    <string name="url_banglanews24">https://www.banglanews24.com/</string>
+    <string name="url_24livenewspaper">https://www.24livenewspaper.com/</string>
+    <string name="url_banglatribune">http://www.banglatribune.com/</string>
+    <string name="url_jagonews">https://www.jagonews24.com/</string>
+    <string name="url_amadershomoy_com">https://www.amadershomoy.com/bn/</string>
+    <string name="url_bbc_bangla">https://www.bbc.com/bengali</string>
+    <string name="url_dmpnews">https://dmpnews.org/</string>
+    <string name="url_risingbd">http://www.risingbd.com/</string>
+    <string name="url_ntvbd">http://www.ntvbd.com/</string>
+    <string name="url_poriborton">https://www.poriborton.com/</string>
+    <string name="url_amaderprotidin">https://amaderprotidin.com/</string>
+    <string name="url_dhakaprotidin">https://dhakaprotidin.com/</string>
+    <string name="url_amar_sangbad">http://www.amar-sangbad.com/</string>
+    <string name="url_channelionline">https://www.channelionline.com/</string>
+    <string name="url_somoynews">http://www.somoynews.tv/</string>
+    <string name="url_independent">http://independent24.com/</string>
+    <string name="url_ekushey">https://www.ekushey-tv.com//</string>
+    <string name="url_rtvonline">https://www.rtvonline.com/</string>
+    <string name="url_banglaexpress">http://banglaexpress247.com/</string>
+    <string name="url_channel24">http://www.channel24bd.tv/</string>
+    <string name="url_ictnews">http://www.dailyictnews.com/</string>
+
+</resources>
