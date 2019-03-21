@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">BD News</string>
-    <string name="title_activity_jugantor">Jugantor</string>
 
+    <string name="app_ad_id">ca-app-pub-1148034318341197~2397747992</string>
+    <string name="banner_ad_loader">ca-app-pub-1148034318341197/8821532025</string>
+    <string name="interstitial_ad_loader">ca-app-pub-1148034318341197/8357006902</string>
+    <string name="rewarded_ad_loader">ca-app-pub-1148034318341197/5539271873</string>
 
     <string name="url_prathom_alo">https://www.prothomalo.com/</string>
     <string name="url_ittefaq">http://www.ittefaq.com.bd/</string>

@@ -74,16 +74,13 @@ public class LoaderActivity extends AppCompatActivity implements RewardedVideoAd
 
         mWebView.loadUrl(mUrl);
 
-        MobileAds.initialize(this,
-                "ca-app-pub-1148034318341197~3492073598");
+        MobileAds.initialize(this, getString(R.string.app_ad_id));
 
         mAdView = findViewById(R.id.banner_ads);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(getAdRequest());
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-1148034318341197/9129868493");
-
+        mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_loader));
 
         mRewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         mRewardedVideoAd.setRewardedVideoAdListener(this);
@@ -92,9 +89,11 @@ public class LoaderActivity extends AppCompatActivity implements RewardedVideoAd
     }
 
     private void loadRewardedVideoAd() {
+        mRewardedVideoAd.loadAd(getString(R.string.rewarded_ad_loader), getAdRequest());
+    }
 
-        mRewardedVideoAd.loadAd("ca-app-pub-1148034318341197/9293520027",
-                new AdRequest.Builder().build());
+    private AdRequest getAdRequest(){
+        return new AdRequest.Builder().addTestDevice("FDBFF074F90728951EFBEB1CEF733603").build();
     }
 
     @Override
@@ -108,9 +107,8 @@ public class LoaderActivity extends AppCompatActivity implements RewardedVideoAd
     public void onBackPressed() {
         if (mWebView.canGoBack()) {
             mWebView.goBack();
-
-            mRewardedVideoAd.show();
-
+            if (mRewardedVideoAd.isLoaded())
+                mRewardedVideoAd.show();
         } else {
             super.onBackPressed();
         }
@@ -120,7 +118,7 @@ public class LoaderActivity extends AppCompatActivity implements RewardedVideoAd
     @Override
     protected void onStart() {
         super.onStart();
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.loadAd(getAdRequest());
         mInterstitialAd.setAdListener(new AdListener(){
             @Override
             public void onAdLoaded() {
@@ -129,10 +127,7 @@ public class LoaderActivity extends AppCompatActivity implements RewardedVideoAd
         });
     }
 
-
-
     //videoAds
-
     @Override
     public void onRewardedVideoAdLoaded() {
 

@@ -1,0 +1,43 @@
+{
+  "project_info": {
+    "project_number": "1021228673149",
+    "firebase_url": "https://bangla-all-newspaper.firebaseio.com",
+    "project_id": "bangla-all-newspaper",
+    "storage_bucket": "bangla-all-newspaper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021228673149:android:883979c8470376f6",
+        "android_client_info": {
+          "package_name": "com.csbl.android.news"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1021228673149-kfavoslomk7o069nr18pf9ej7d1ulal0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmWVNDUkBe0V3N8ZCe0fS0UZTry9zgqw0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-1148034318341197~2397747992"
+    }
+  ],
+  "configuration_version": "1"
+}

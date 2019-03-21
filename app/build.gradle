@@ -1,37 +1,43 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'com.google.gms.google-services'
 
 android {
+    signingConfigs {
+        ReleaseApk {
+            keyAlias 'newsapp'
+            keyPassword '@#856567@#'
+            storeFile file('/home/noman/Android/Github/allnews/KeyStore/NewsApp.jks')
+            storePassword '@#856567@#'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.csbl.android.news"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-
+        minSdkVersion 19
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        signingConfig signingConfigs.ReleaseApk
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
     dataBinding {
         enabled = true
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "androidx.appcompat:appcompat:${androidX}"
-    implementation "com.android.support.constraint:constraint-layout:${constraintLayout}"
-
+    implementation "androidx.constraintlayout:constraintlayout:${constraintLayout}"
     //life cycle dependencies
     implementation "android.arch.lifecycle:runtime:${lifecycle}"
     implementation "android.arch.lifecycle:extensions:${lifecycle}"
@@ -39,5 +45,7 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:${lifecycle}"
     //admob deps
     implementation "com.google.android.gms:play-services-ads:${admobAdsVersion}"
-
+    implementation "com.google.firebase:firebase-core:$firebaseCore"
 }
+
+apply plugin: 'com.google.gms.google-services'

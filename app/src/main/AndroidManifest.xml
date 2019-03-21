@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.csbl.android.news">
 
     <uses-permission android:name="android.permission.INTERNET"> </uses-permission>
@@ -11,7 +12,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/app_ad_id"/>
+
         <activity android:name="com.csbl.android.news.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,13 +28,9 @@
 
         <activity android:name=".ui.LoaderActivity"/>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true"/>
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1148034318341197~3492073598"/>
+        <!--<meta-data-->
+            <!--android:name="com.google.android.gms.ads.AD_MANAGER_APP"-->
+            <!--android:value="true"/>-->
 
     </application>
 
